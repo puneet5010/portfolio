@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Assignment 4</title>
+    <style>
+        body{
+            background-color: #00d19a;
+           
+
+            
+        }
+        html {
+            scroll-behavior: smooth;
+        }  
+        
+        @media screen and (max-width: 600px) {
+            #name {
+              visibility: hidden;
+              clear: both;
+              float: left;
+              margin: 10px auto 5px 20px;
+              width: 0%;
+              height:0px;
+              display: none;
+            }
+        }
+        @media screen and (min-width: 600px) {
+            #xname {
+              visibility: hidden;
+              clear: both;
+              float: left;
+              margin: 10px auto 5px 20px;
+              width: 0%;
+              height:0px;
+              display: none;
+            }
+          }
+        
+
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body class="mw-100">
+
+
+
+    <!-- navbar  -->
+    <div class="container-lg  p-3">
+        <div class="navbarContainer container-lg ">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <a class="navbar-brand" href="#name">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#language">Language</a>
+                </li>    
+            </ul>
+            </div>  
+        </nav>
+    </div>
+
+    <!-- Name -->
+
+    <div class="container-lg p-3"  >
+       
+      
+      <div class="d-flex flex-row bg-light" id="name">
+        <div><img src="data:image/jpeg;base64,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" width="100%" height="100%" style="display: block; border-style: solid;
+          border-width: 13px; border-color:rgb(231, 231, 231);"></div>
+          <div style="margin-left: 3%; margin-right:3%;">
+          <h1>Hello.</h1>
+          <h3 class="font-weight-light">I AM PUNEET KUMAR</h3>
+          <h5 class="font-weight-light">& I am a Student at Chitkara Unversity</h5><br>
+          <button type="button"  class="btn btn-outline-success" style="margin-bottom: 2%;">View Portfolio</button>
+        </div>
+      </div>
+      <div class="d-flex flex-column bg-light">
+        
+          
+      </div>
+
+
+ 
+      <div class="d-flex flex-column bg-light align-items-center container-lg p-2" id="xname" >
+        <div><img src="https://raw.githubusercontent.com/adsinghnet/FullStackAssignments/main/Assignment%204/pp.jpg" class="mt-0"  width="100%" height="100%" style="display: block; border-style: solid;
+          border-width: 13px;  border-color:rgb(231, 231, 231);"></div>
+        <div><h1 class="ml-2">Hello.</h1></div>
+        <div><h3 class="font-weight-light ml-2">I AM PUNEET KUMAR</h3></div>
+        <div><h5 class="font-weight-light ml-2">& I am a Student at CHITKARA UNIVERSITY</h5></div>
+        <div><button type="button"  class="btn btn-outline-success mb-0">View Portfolio</button></div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <!--
+        <div class="media bg-light  " >
+         
+            
+          <div class="image"></div>
+            <div class="media-body align-self-center mr-3" id="inname">
+              <h1>Hello.</h1>
+              <h3 class="font-weight-light">I AM SABEEL KHAN</h3>
+              <h5 class="font-weight-light">& I am a Student at Coding Blocks</h5>
+              <button type="button"  class="btn btn-outline-success" style="margin-bottom: 2%;">View Portfolio</button>
+            </div>
+          </div>-->
+
+    </div>
+
+
+    <!-- About -->
+
+
+    <div class="container-lg p-3" id="about">
+        <div class="bg-light container-fluid pt-auto" >
+            <h2 style="padding: 4% 4% 0% 4%;">About Me</h2>
+            <p style="padding: 2% 4% 4% 4%;">Hi my name is Sabir Khan I am a web development student at coding blocks Noida I am in class 7th and my school name is Tagore International School I also love programming I have made many projects using HTML CSS and Bootstrap.</p>
+        </div>
+    </div>
+
+    <!-- Projects -->
+
+    <div class="container-lg p-3" id="projects">
+        <div class="bg-light container-fluid pt-auto" >
+            <h2 style="padding: 4% 4% 0% 4%;">Projects</h2>
+            <div style="padding: 1% 4% 4% 4%;">
+            <table class="table table-bordered" >
+                <tbody>
+                  <tr>
+                    <td>Patatap Clone</td>
+
+                  </tr>
+                  <tr>
+                    <td>Tic Tac Toe</td>
+
+                  </tr>
+                  <tr>
+                    <td>Dandrum</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Languages -->
+    <div class="container-lg p-3" id="language">
+        <div class="bg-light container-fluid pt-auto" >
+            <h2 style="padding: 4% 4% 0% 4%;">Languages</h2>
+            <div style="padding: 1% 4% 4% 4%;">
+            <table class="table table-bordered" >
+                <tbody>
+                  <tr>
+                    <td>HTML</td>
+
+                  </tr>
+                  <tr>
+                    <td>CSS</td>
+
+                  </tr>
+                  <tr>
+                    <td>JavaScript</td>
+
+                  </tr>
+                  <tr>
+                    <td>C++</td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+
+      
+
+
+</body>
+</html>
